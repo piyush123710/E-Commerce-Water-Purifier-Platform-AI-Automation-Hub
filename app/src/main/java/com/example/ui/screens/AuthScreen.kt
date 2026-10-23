@@ -322,60 +322,60 @@ fun AuthScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 24.dp, vertical = 28.dp),
+                .padding(horizontal = 20.dp, vertical = 12.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(8.dp))
 
-            // Official Brand Logo
+            // Official Brand Logo (Compact)
             Image(
                 painter = painterResource(id = R.drawable.ic_califnco_brand_logo),
                 contentDescription = "Califnco Official Brand Logo",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(92.dp)
+                    .size(68.dp)
                     .clip(CircleShape)
                     .border(2.dp, OceanBluePrimary.copy(alpha = 0.5f), CircleShape)
             )
 
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(6.dp))
 
             Text(
                 text = "Califnco",
-                fontSize = 28.sp,
+                fontSize = 24.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = MaterialTheme.colorScheme.primary
             )
 
             Text(
                 text = "Pure Water Technology & Wholesale B2B",
-                fontSize = 13.sp,
+                fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             Surface(
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(10.dp),
                 color = OceanBlueLight,
-                modifier = Modifier.padding(top = 8.dp)
+                modifier = Modifier.padding(top = 6.dp)
             ) {
                 Text(
                     text = "Welcome! Register or Login to unlock 50+ water tech products",
-                    fontSize = 11.sp,
+                    fontSize = 10.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = OceanBlueDark,
-                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                     textAlign = TextAlign.Center
                 )
             }
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
             // Tab Selector: Register vs Login
             TabRow(
                 selectedTabIndex = if (isRegisterMode) 0 else 1,
                 containerColor = MaterialTheme.colorScheme.surface,
                 contentColor = OceanBluePrimary,
-                modifier = Modifier.clip(RoundedCornerShape(12.dp))
+                modifier = Modifier.clip(RoundedCornerShape(10.dp))
             ) {
                 Tab(
                     selected = isRegisterMode,

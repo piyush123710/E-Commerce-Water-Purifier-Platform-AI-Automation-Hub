@@ -5,6 +5,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -223,6 +225,44 @@ fun CatalogScreen(
             }
 
             Spacer(modifier = Modifier.height(4.dp))
+
+            // Horizontal Scrolling Offer Ticker Carousel (Smooth Scroll System)
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                contentPadding = PaddingValues(vertical = 4.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("promo_scroll_carousel")
+            ) {
+                items(
+                    listOf(
+                        Triple("⚡ Free Installation", "On all RO Water Purifiers", OceanBluePrimary),
+                        Triple("🔥 Dealer B2B Mode", "Up to 40% Wholesale Margin", AquaTealDark),
+                        Triple("🛡️ Califnco Care AMC", "100% Free Filter Replacements", PurpleAccent),
+                        Triple("🎁 Referral Bonus", "Earn ₹500 Per Friend Invited", SuccessGreen)
+                    )
+                ) { (title, subtitle, color) ->
+                    Card(
+                        shape = RoundedCornerShape(12.dp),
+                        colors = CardDefaults.cardColors(containerColor = color.copy(alpha = 0.12f)),
+                        modifier = Modifier
+                            .width(200.dp)
+                            .height(64.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(10.dp),
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            Text(text = title, fontWeight = FontWeight.Bold, fontSize = 12.sp, color = color)
+                            Text(text = subtitle, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1)
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(6.dp))
 
             // Sort & Results Counter Row
             Row(

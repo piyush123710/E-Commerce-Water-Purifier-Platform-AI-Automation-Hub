@@ -102,8 +102,6 @@ This repository contains the complete, production-grade Android application buil
 - **Viral Water Tech Hashtags**: Generates relevant hashtags (`#Califnco #CleanWater #AlkalineWater #WaterPurifier #PureWaterPureLife #HomeAppliances`).
 - **Realistic Instagram Post Mockup**: Shows verified account badge (`califnco_official`), engagement buttons, Cloudinary/ImgBB public media CDN links, and simulated publishing via **Meta Graph API v21.0**.
 - **Webhook Inspector**: Displays the complete JSON payload for n8n / Make.com automation workflows.
-- **AI Automation Video Recording Link (Drive / Loom / YouTube)**: 
-  - **Recording URL:** [https://www.loom.com/share/califnco-ai-automation-round1-demo](https://www.loom.com/share/califnco-ai-automation-round1-demo) *(Set to "Anyone with the link can view")*
   - **Video Walkthrough:** Demonstrates the end-to-end daily workflow generating the AI product image and caption via Gemini AI, and publishing live to Instagram via Meta Graph API and WAHA WhatsApp Status broadcast.
 
 ---

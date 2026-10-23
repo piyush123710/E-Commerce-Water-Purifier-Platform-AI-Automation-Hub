@@ -1,0 +1,6 @@
+{
+  "name": "Califnco",
+  "description": "Califnco E-Commerce Water Purifier platform with Customer catalog of 50+ items, Dealer wholesale portal, Admin desk, Razorpay test checkout, Service booking, and AI Marketing automation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

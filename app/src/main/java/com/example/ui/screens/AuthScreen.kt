@@ -613,7 +613,7 @@ fun AuthScreen(
                             modifier = Modifier.fillMaxWidth()
                         )
 
-                        Spacer(modifier = Modifier.height(4.dp))
+                        Spacer(modifier = Modifier.height(8.dp))
 
                         // Register Button
                         Button(
@@ -638,7 +638,7 @@ fun AuthScreen(
                             ),
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(50.dp)
+                                .height(52.dp)
                                 .testTag("register_submit_btn")
                         ) {
                             Icon(Icons.Default.CheckCircle, contentDescription = null, modifier = Modifier.size(20.dp))
@@ -663,12 +663,12 @@ fun AuthScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                        verticalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         Text(
                             text = "Login to Califnco",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp,
+                            fontSize = 15.sp,
                             color = MaterialTheme.colorScheme.primary
                         )
 
@@ -715,7 +715,7 @@ fun AuthScreen(
             }
 
             errorMessage?.let { err ->
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(6.dp))
                 Text(
                     text = err,
                     color = ErrorRed,
@@ -724,7 +724,7 @@ fun AuthScreen(
                 )
             }
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             // Or Continue with Google
             Row(
@@ -741,7 +741,7 @@ fun AuthScreen(
                 HorizontalDivider(modifier = Modifier.weight(1f))
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             // Google Sign In button
             OutlinedButton(
@@ -749,7 +749,7 @@ fun AuthScreen(
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(48.dp)
+                    .height(46.dp)
                     .testTag("google_login_btn")
             ) {
                 Icon(
@@ -762,7 +762,7 @@ fun AuthScreen(
                 Text("Continue with Google", fontWeight = FontWeight.Bold, fontSize = 13.sp)
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             // Quick Demo 1-Tap Logins for evaluators
             Row(
@@ -774,7 +774,7 @@ fun AuthScreen(
                         onLogin("piyushnagbansi500@gmail.com", UserRole.CUSTOMER)
                     },
                     shape = RoundedCornerShape(8.dp),
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f).height(40.dp)
                 ) {
                     Text("1-Tap Customer", fontSize = 11.sp)
                 }
@@ -784,13 +784,14 @@ fun AuthScreen(
                         onLogin("dealer@aquatech.com", UserRole.DEALER)
                     },
                     shape = RoundedCornerShape(8.dp),
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f).height(40.dp)
                 ) {
                     Text("1-Tap Dealer", fontSize = 11.sp)
                 }
             }
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(28.dp))
         }
     }
 }
+
